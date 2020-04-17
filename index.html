@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 6</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+   
+
+      <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Look up City</button>
+        </form>
+      </nav>
+    <script src="C:\Users\rexca\Documents\gwubootcamp\homework\06_homework\weather.js"></script>
+    <script type="text/javascript">
+    var APIKey = "5746f483920cb8dbd54b338576b8e907";
+
+    //hahhahah
+    <div class="container">
+   
+    <div id="weather-view"></div>
+
+    
+      // This .on("click") function will trigger the AJAX Call
+      $("#find-movie").on("click", function(event) {
+
+        // event.preventDefault() can be used to prevent an event's default behavior.
+        // Here, it prevents the submit button from trying to submit a form when clicked
+        event.preventDefault();
+
+        // Here we grab the text from the input box
+        var weather = $("#weather-input").val();
+
+        // Here we construct our URL
+        var queryURL = "https://home.openweathermap.org/api_keys";
+
+        // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
+        // and display it in the div with an id of movie-view
+
+        // ------YOUR CODE GOES IN THESE DASHES. DO NOT MANUALLY EDIT THE HTML ABOVE.
+
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).then(function(response) {
+          $("#weather-view").text(JSON.stringify(response));
+        });
+
+        // -----------------------------------------------------------------------
+
+      });
+      </div>
+    
+    
+
+</script>
+</body>
+</html>
